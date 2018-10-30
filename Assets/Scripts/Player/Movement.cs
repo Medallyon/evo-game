@@ -4,35 +4,59 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    // Create a shorthand for the player's current position
+    private Vector3 currentPosition
+    {
+        get
+        {
+            return this.gameObject.transform.position;
+        }
+        set
+        {
+            this.gameObject.transform.position = new Vector3(value.x, this.currentPosition.y, this.currentPosition.z);
+        }
+    }
+    
+    public LayerMask hitLayers;
+    private Vector3 targetPosition;
+    private Camera cam;
+
 	// Use this for initialization
 	void Start()
     {
-		
+        this.cam = Camera.main;
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate()
+	void Update()
     {
-        float horizontal = 0;
+        Ray castPoint;
+        RaycastHit hit;
 
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            castPoint = this.cam.ScreenPointToRay(mousePos);
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, hitLayers))
+                this.targetPosition = hit.point;
+        }
 #else
 
         if (Input.touchCount > 0)
         {
             Touch myTouch = Input.touches[0];
+            Vector2 touchPos = myTouch.position;
 
-            if (myTouch.phase == TouchPhase.Began || myTouch.phase == TouchPhase.Moved)
-                horizontal = myTouch.rawPosition.x;
+            castPoint = this.cam.ScreenPointToRay(touchPos);
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, hitLayers))
+                this.targetPosition = hit.point;
         }
 
 #endif
 
-        var currentPosition = this.gameObject.transform.position;
-        if (horizontal != 0)
-            this.gameObject.transform.position = new Vector3(currentPosition.x + horizontal, currentPosition.y, currentPosition.z);
+        if (this.currentPosition.x != this.targetPosition.x)
+            this.currentPosition = this.targetPosition;
     }
 }
