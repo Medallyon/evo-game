@@ -551,8 +551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebde86a38ca2c964d88cb3e69a3e0e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Difficulty: 1
+  Difficulty: 3
   Obstacle: {fileID: 1570786515968380, guid: d020d9452de5c3744b1aa16643d5806f, type: 2}
+  Edible: {fileID: 0}
   SpawnPosition: {x: 8.3, y: 1, z: 26}
 --- !u!4 &2112969599
 Transform:
