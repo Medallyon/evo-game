@@ -18,6 +18,42 @@ ModelImporter:
     100024: pSphere1
     100026: pSphere2
     100028: pSphere3
+    100030: place3dTexture3
+    100032: place3dTexture4
+    100034: body1
+    100036: body2
+    100038: body3
+    100040: bottom1
+    100042: clavicle_l_arm
+    100044: clavicle_l_leg
+    100046: clavicle_r_leg
+    100048: joint1
+    100050: joint2
+    100052: joint3
+    100054: joint4
+    100056: l_arm1
+    100058: l_arm2
+    100060: l_arm3
+    100062: l_leg1
+    100064: l_leg2
+    100066: l_leg3
+    100068: l_leg4
+    100070: pCylinder4_pCube2
+    100072: pCylinder5_pCube2
+    100074: pCylinder6
+    100076: pCylinder7
+    100078: r_leg1
+    100080: r_leg2
+    100082: r_leg3
+    100084: r_leg4
+    100086: transform1
+    100088: transform2
+    100090: transform3
+    100092: transform4
+    100094: transform5
+    100096: transform6
+    100098: transform7
+    100100: transform8
     400000: //RootNode
     400002: pCube1
     400004: pCube1 1
@@ -33,9 +69,49 @@ ModelImporter:
     400024: pSphere1
     400026: pSphere2
     400028: pSphere3
+    400030: place3dTexture3
+    400032: place3dTexture4
+    400034: body1
+    400036: body2
+    400038: body3
+    400040: bottom1
+    400042: clavicle_l_arm
+    400044: clavicle_l_leg
+    400046: clavicle_r_leg
+    400048: joint1
+    400050: joint2
+    400052: joint3
+    400054: joint4
+    400056: l_arm1
+    400058: l_arm2
+    400060: l_arm3
+    400062: l_leg1
+    400064: l_leg2
+    400066: l_leg3
+    400068: l_leg4
+    400070: pCylinder4_pCube2
+    400072: pCylinder5_pCube2
+    400074: pCylinder6
+    400076: pCylinder7
+    400078: r_leg1
+    400080: r_leg2
+    400082: r_leg3
+    400084: r_leg4
+    400086: transform1
+    400088: transform2
+    400090: transform3
+    400092: transform4
+    400094: transform5
+    400096: transform6
+    400098: transform7
+    400100: transform8
+    2000000: bottom1
     2100000: aiSS_frog_base
     2100002: aiSS_frog_eye
     2100004: aiSS_frog_pupil
+    2100006: blinn_frog_base
+    2100008: blinn_frog_eye
+    2100010: blinn_frog_pupil
     2300000: pCube1
     2300002: pCube1 1
     2300004: pCube2

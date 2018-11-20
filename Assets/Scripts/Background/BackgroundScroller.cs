@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingBackground : MonoBehaviour
+public class BackgroundScroller : MonoBehaviour
 {
     // Scroll main texture based on time
 
@@ -16,7 +16,7 @@ public class MovingBackground : MonoBehaviour
 
     void Update()
     {
-        float offset = Time.time * (this.ScrollSpeed / 10);
+        float offset = Time.time * (this.ScrollSpeed / 100);
         this.rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
     }
 }
