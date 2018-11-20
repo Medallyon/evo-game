@@ -6,11 +6,18 @@ public class GameController : MonoBehaviour
 {
     public float Difficulty;
     public GameObject Obstacle;
+    public GameObject Edible;
     public Vector3 SpawnPosition;
 
     private void SpawnWave()
     {
-        Instantiate(this.Obstacle, new Vector3(Random.Range(-this.SpawnPosition.x, this.SpawnPosition.x), 1, this.SpawnPosition.z), Quaternion.identity);
+        GameObject toInstantiate = this.Obstacle;
+
+        // Change the object to spawn to an edible instead of an obstacle
+        if (Random.value > .7f)
+            toInstantiate = this.Edible;
+
+        Instantiate(toInstantiate, new Vector3(Random.Range(-this.SpawnPosition.x, this.SpawnPosition.x), 1, this.SpawnPosition.z), Quaternion.identity);
     }
 
     // Use this for initialization
