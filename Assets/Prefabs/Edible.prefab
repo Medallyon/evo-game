@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114834404976583768}
   m_Layer: 0
   m_Name: Edible
-  m_TagString: Obstacle
+  m_TagString: Edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  Score: 0
 --- !u!114 &114834404976583768
 MonoBehaviour:
   m_ObjectHideFlags: 1
