@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
 	void Start()
     {
         this.cam = Camera.main;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update()
