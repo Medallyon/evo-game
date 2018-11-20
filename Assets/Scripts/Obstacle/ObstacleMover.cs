@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleMover : MonoBehaviour
 {
     public float Speed;
+    public float Score;
     
     private Transform target;
     private int frames = 0;
@@ -13,6 +14,7 @@ public class ObstacleMover : MonoBehaviour
     void Start()
     {
         this.target = GameObject.Find("Player").transform;
+        this.Score = Random.value * 50;
     }
 
     void Update()

@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
  
 public class ScoreHandler : MonoBehaviour
 {
+    private float currentScore = 0;
+
     #region Public Fields
     public float ScoreToWin = 1000;
+    public Text textScore;
     #endregion
  
     #region Unity Methods
@@ -18,8 +23,12 @@ public class ScoreHandler : MonoBehaviour
     {
         if (other.tag != "Edible")
             return;
+        
+        List<ObstacleMover> movingObjects = FindObjectsOfType<ObstacleMover>().ToList();
+        ObstacleMover wantedObject = movingObjects.Find(x => x.GetComponent<Collider>() == other);
+        this.currentScore += wantedObject.Score;
 
-        // Implement Score-specific code
+        this.textScore.text = "Score: " + (int)this.currentScore;
     }
     #endregion
 
