@@ -14,7 +14,7 @@ public class ObstacleMover : MonoBehaviour
     void Start()
     {
         this.target = GameObject.Find("Player").transform;
-        this.Score = Random.value * 50;
+        this.Score = Random.value * this.Score;
     }
 
     void Update()
