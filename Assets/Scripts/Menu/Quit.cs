@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
  
 public class Quit : MonoBehaviour
 {
@@ -8,16 +9,9 @@ public class Quit : MonoBehaviour
     #endregion
  
     #region Unity Methods 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
-    }
-
-    private void OnMouseUp()
-    {
-        Debug.Log("Clicked Sprite");
-        Application.Quit();
+        this.GetComponent<Button>().onClick.AddListener(() => Application.Quit());
     }
     #endregion
 
