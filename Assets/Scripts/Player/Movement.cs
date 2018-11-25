@@ -63,8 +63,5 @@ public class Movement : MonoBehaviour
         // Move if the target position is different from the current position
         if (this.currentPosition.x != this.targetPosition.x)
             this.currentPosition = this.targetPosition;
-
-        if (this.currentPosition.x > this.targetPosition.x && this.transform.rotation.z > -30f)
-            this.transform.Rotate(this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z - 1f);
     }
 }
