@@ -14,7 +14,7 @@ public class ObstacleMover : MonoBehaviour
     void Start()
     {
         this.target = GameObject.Find("Player").transform;
-        this.Score = Random.value * this.Score;
+        this.Score = Mathf.Max(5f, Random.value * this.Score);
     }
 
     void Update()
