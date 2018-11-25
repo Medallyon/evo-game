@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleMover : MonoBehaviour
 {
     public float Speed;
-    public float Score;
+    public float Score = 100;
     
     private Transform target;
     private int frames = 0;
