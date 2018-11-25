@@ -468,6 +468,11 @@ Prefab:
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 2103693446}
+    - target: {fileID: 114112999644928300, guid: d6bc8e1d9ac4bc949aa69196a7039102,
+        type: 2}
+      propertyPath: Lives
+      value: 10000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6bc8e1d9ac4bc949aa69196a7039102, type: 2}
   m_IsPrefabAsset: 0
@@ -699,6 +704,8 @@ MonoBehaviour:
   Difficulty: 1
   Obstacle: {fileID: 1384121110195524, guid: 742ec793160e6c84695074f4c586ce0e, type: 2}
   Edible: {fileID: 1068346527764252, guid: aa0f91d8f4e87f04baa347b68d2306ff, type: 2}
+  PowerUp: {fileID: 1933307992824908, guid: 4a57ca123213d85449ba49fbeea40245, type: 2}
+  Coin: {fileID: 1724683967733414, guid: ebc2609655d3d3248bc9b45c275bf44a, type: 2}
   SpawnPosition: {x: 8.3, y: 1, z: 26}
 --- !u!4 &2112969599
 Transform:
