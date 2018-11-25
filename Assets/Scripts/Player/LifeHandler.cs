@@ -16,7 +16,7 @@ public class LifeHandler : MonoBehaviour
     #region Unity Methods
     void Start()
     {
-        GameObject TextBox = new GameObject("Text_Score");
+        GameObject TextBox = new GameObject("Text_Lives");
         TextBox.transform.parent = this.Canvas.transform;
         this.textLives = TextBox.AddComponent<Text>();
 
