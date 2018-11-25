@@ -81,7 +81,6 @@ public class ScoreHandler : MonoBehaviour
             rect.y = 0;
         }
 
-        Debug.Log(rect.x + ", " + rect.y);
         return rect;
     }
     #endregion
