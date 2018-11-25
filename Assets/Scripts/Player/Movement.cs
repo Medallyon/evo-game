@@ -56,7 +56,15 @@ public class Movement : MonoBehaviour
 
 #endif
 
+        // Return and don't move if player touch is too far from current position to prevent cheating
+        if (this.targetPosition.x > this.currentPosition.x + 1f || this.targetPosition.x < this.currentPosition.x - 1f)
+            return;
+
+        // Move if the target position is different from the current position
         if (this.currentPosition.x != this.targetPosition.x)
             this.currentPosition = this.targetPosition;
+
+        if (this.currentPosition.x > this.targetPosition.x && this.transform.rotation.z > -30f)
+            this.transform.Rotate(this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z - 1f);
     }
 }
