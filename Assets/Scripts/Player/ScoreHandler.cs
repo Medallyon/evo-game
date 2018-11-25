@@ -13,7 +13,7 @@ public class ScoreHandler : MonoBehaviour
     public Text TextPrefab;
     #endregion
 
-    private float currentScore = 0;
+    private float currentScore = 0f;
     private Text textScore;
  
     #region Unity Methods
@@ -48,8 +48,10 @@ public class ScoreHandler : MonoBehaviour
         List<ObstacleMover> movingObjects = FindObjectsOfType<ObstacleMover>().ToList();
         ObstacleMover wantedObject = movingObjects.Find(x => x.GetComponent<Collider>() == other);
         this.currentScore += wantedObject.Score * this.ScoreMultiplier;
+    }
 
-        // TODO: Instantiate(FLOATING +SCORE TEXT!!!)
+    void Update()
+    {
         this.textScore.text = "Score: " + (int)this.currentScore;
         if (this.ScoreMultiplier > 1f)
             this.textScore.text += " (" + this.ScoreMultiplier.ToString("0.##") + "x)";
