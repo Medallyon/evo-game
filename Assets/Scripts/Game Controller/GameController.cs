@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public float Difficulty;
+    public float Difficulty = 1f;
     public GameObject Obstacle;
     public GameObject Edible;
     public Vector3 SpawnPosition;
@@ -23,11 +23,11 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     IEnumerator Start()
     {
+        Time.timeScale = this.Difficulty;
         while (GameObject.Find("Player") != null)
         {
             SpawnWave();
-            this.Difficulty += .1f;
-            yield return new WaitForSeconds(Mathf.Max(1f, Random.Range(0f, 5f) - this.Difficulty));
+            yield return new WaitForSeconds(1f);
         }
     }
 }
