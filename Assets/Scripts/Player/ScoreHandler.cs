@@ -8,6 +8,7 @@ public class ScoreHandler : MonoBehaviour
 {
     #region Public Fields
     public float ScoreToWin = 1000;
+    public float ScoreMultiplier = 1;
     public GameObject Canvas;
     public Text TextPrefab;
     #endregion
@@ -46,9 +47,12 @@ public class ScoreHandler : MonoBehaviour
         
         List<ObstacleMover> movingObjects = FindObjectsOfType<ObstacleMover>().ToList();
         ObstacleMover wantedObject = movingObjects.Find(x => x.GetComponent<Collider>() == other);
-        this.currentScore += wantedObject.Score;
+        this.currentScore += wantedObject.Score * this.ScoreMultiplier;
 
+        // TODO: Instantiate(FLOATING +SCORE TEXT!!!)
         this.textScore.text = "Score: " + (int)this.currentScore;
+        if (this.ScoreMultiplier > 1f)
+            this.textScore.text += " (" + this.ScoreMultiplier.ToString("0.##") + "x)";
     }
     #endregion
 
