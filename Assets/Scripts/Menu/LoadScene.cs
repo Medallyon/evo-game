@@ -20,7 +20,6 @@ public class LoadScene : MonoBehaviour
     #region Private Methods
     private void LoadGame()
     {
-        Debug.Log("Scene loading: " + this.Scene);
         SceneManager.LoadScene(this.Scene, LoadSceneMode.Single);
     }
     #endregion

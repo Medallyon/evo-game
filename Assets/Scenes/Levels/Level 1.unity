@@ -581,6 +581,11 @@ Prefab:
       propertyPath: m_Name
       value: MIKEY REPLACE ME WITH CELL PREFAB
       objectReference: {fileID: 0}
+    - target: {fileID: 114955846861776438, guid: db309981c37f53e439b1c6e65ecc8e7d,
+        type: 2}
+      propertyPath: NextLevel
+      value: Level 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
   m_IsPrefabAsset: 0
@@ -707,7 +712,7 @@ MonoBehaviour:
   Difficulty: 1
   Obstacle: {fileID: 1570786515968380, guid: d020d9452de5c3744b1aa16643d5806f, type: 2}
   Edible: {fileID: 1574058828387404, guid: 5a7f6bb438be0cd48853d248d4aeacb5, type: 2}
-  PowerUp: {fileID: 1933307992824908, guid: 4a57ca123213d85449ba49fbeea40245, type: 2}
+  PowerUp: {fileID: 1262237680677532, guid: 6f5be2270594b2b4193408de4fd914b7, type: 2}
   Coin: {fileID: 1724683967733414, guid: ebc2609655d3d3248bc9b45c275bf44a, type: 2}
   SpawnPosition: {x: 8.3, y: 1, z: 26}
   Parent: {fileID: 0}

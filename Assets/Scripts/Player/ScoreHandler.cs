@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
  
 public class ScoreHandler : MonoBehaviour
 {
     #region Public Fields
+    public string NextLevel;
     public float ScoreToWin = 1000;
     public float ScoreMultiplier = 1;
     public GameObject Canvas;
@@ -48,6 +50,9 @@ public class ScoreHandler : MonoBehaviour
         List<ObstacleMover> movingObjects = FindObjectsOfType<ObstacleMover>().ToList();
         ObstacleMover wantedObject = movingObjects.Find(x => x.GetComponent<Collider>() == other);
         this.currentScore += wantedObject.Score * this.ScoreMultiplier;
+
+        if (this.currentScore >= this.ScoreToWin)
+            SceneManager.LoadSceneAsync(this.NextLevel, LoadSceneMode.Single);
     }
 
     void Update()

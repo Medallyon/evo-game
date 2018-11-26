@@ -30,7 +30,6 @@ public class Movement : MonoBehaviour
         Vector3 boundaryPosition = GameObject.Find("BackgroundPlane").transform.position;
         Vector3 boundarySize = GameObject.Find("BackgroundPlane").GetComponent<Renderer>().bounds.size;
         this.boundary = new Rect(boundaryPosition.x, boundaryPosition.z, boundarySize.x, boundarySize.z);
-        Debug.Log(this.boundary);
     }
 	
 	// Update is called once per frame

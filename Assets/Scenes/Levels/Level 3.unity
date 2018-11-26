@@ -468,6 +468,16 @@ Prefab:
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 2103693446}
+    - target: {fileID: 114404687889425676, guid: d6bc8e1d9ac4bc949aa69196a7039102,
+        type: 2}
+      propertyPath: Lives
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114707963095950732, guid: d6bc8e1d9ac4bc949aa69196a7039102,
+        type: 2}
+      propertyPath: NextLevel
+      value: MainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6bc8e1d9ac4bc949aa69196a7039102, type: 2}
   m_IsPrefabAsset: 0
@@ -699,7 +709,7 @@ MonoBehaviour:
   Difficulty: 2
   Obstacle: {fileID: 1379571428818356, guid: 0b05242ea524d0e48836f93d3f0e7c25, type: 2}
   Edible: {fileID: 1068346527764252, guid: aa0f91d8f4e87f04baa347b68d2306ff, type: 2}
-  PowerUp: {fileID: 1933307992824908, guid: 4a57ca123213d85449ba49fbeea40245, type: 2}
+  PowerUp: {fileID: 1262237680677532, guid: 6f5be2270594b2b4193408de4fd914b7, type: 2}
   Coin: {fileID: 1724683967733414, guid: ebc2609655d3d3248bc9b45c275bf44a, type: 2}
   SpawnPosition: {x: 8.3, y: 1, z: 26}
   Parent: {fileID: 0}
