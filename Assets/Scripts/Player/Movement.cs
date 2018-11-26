@@ -20,11 +20,17 @@ public class Movement : MonoBehaviour
     public LayerMask hitLayers;
     private Vector3 targetPosition;
     private Camera cam;
+    private Rect boundary;
 
 	// Use this for initialization
 	void Start()
     {
         this.cam = Camera.main;
+
+        Vector3 boundaryPosition = GameObject.Find("BackgroundPlane").transform.position;
+        Vector3 boundarySize = GameObject.Find("BackgroundPlane").GetComponent<Renderer>().bounds.size;
+        this.boundary = new Rect(boundaryPosition.x, boundaryPosition.z, boundarySize.x, boundarySize.z);
+        Debug.Log(this.boundary);
     }
 	
 	// Update is called once per frame
@@ -57,7 +63,11 @@ public class Movement : MonoBehaviour
 #endif
 
         // Return and don't move if player touch is too far from current position to prevent cheating
-        if (this.targetPosition.x > this.currentPosition.x + 1f || this.targetPosition.x < this.currentPosition.x - 1f)
+        if (this.targetPosition.x > this.currentPosition.x + 3f || this.targetPosition.x < this.currentPosition.x - 3f)
+            return;
+
+        // Return and don't move if target position / finger is outside of play bounds
+        if (this.targetPosition.x < this.boundary.x - (this.boundary.width / 4) || this.targetPosition.x > (this.boundary.x + this.boundary.width / 4))
             return;
 
         // Move if the target position is different from the current position
