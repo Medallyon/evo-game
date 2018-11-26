@@ -703,7 +703,10 @@ MonoBehaviour:
   Difficulty: 1
   Obstacle: {fileID: 1570786515968380, guid: d020d9452de5c3744b1aa16643d5806f, type: 2}
   Edible: {fileID: 1574058828387404, guid: 5a7f6bb438be0cd48853d248d4aeacb5, type: 2}
+  PowerUp: {fileID: 1724683967733414, guid: ebc2609655d3d3248bc9b45c275bf44a, type: 2}
+  Coin: {fileID: 0}
   SpawnPosition: {x: 8.3, y: 1, z: 26}
+  Parent: {fileID: 0}
 --- !u!4 &2112969599
 Transform:
   m_ObjectHideFlags: 0
