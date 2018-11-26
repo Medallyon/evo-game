@@ -24,7 +24,7 @@ public class PowerUpMultiplier : MonoBehaviour
             return;
 
         ScoreHandler playerObject = FindObjectOfType<ScoreHandler>();
-        playerObject.ScoreMultiplier = 2f;
+        playerObject.ScoreMultiplier *= 2f;
 
         // TODO: Instantiate(DOUBLE SCORE TEXT!!!);
 
@@ -36,12 +36,12 @@ public class PowerUpMultiplier : MonoBehaviour
 
         timer.Elapsed += (object Source, ElapsedEventArgs e) =>
         {
-            playerObject.ScoreMultiplier = 1;
+            playerObject.ScoreMultiplier /= 2f;
             timer.Enabled = false;
         };
 
         Text scoreMultText = Instantiate(this.HoverTextPrefab);
-        scoreMultText.text = (playerObject.ScoreMultiplier == 2f) ? "DOUBLE POINTS" : "SCORE MULTIPLIER";
+        scoreMultText.text = "DOUBLE POINTS";
         scoreMultText.transform.SetParent(this.Canvas.transform, false);
 
         Destroy(this.gameObject);
