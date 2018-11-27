@@ -40,15 +40,28 @@ public class LifeHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Obstacle")
-            return;
-
-        this.DecreaseLives();
-        this.GetComponent<AudioSource>().PlayOneShot(this.CollideSound, .5f);
+        if (other.tag == "Obstacle")
+        {
+            this.DecreaseLives();
+            this.GetComponent<AudioSource>().PlayOneShot(this.CollideSound, .5f);
+        }
+        else if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+            this.IncreaseLives();
+        }
     }
     #endregion
 
     #region Private Methods
+    private void IncreaseLives()
+    {
+        this.Lives++;
+
+        // Implement UI-specific code (i.e. 4 -> 5 hearts)
+        this.textLives.text = "Lives: " + this.Lives;
+    }
+
     private void DecreaseLives()
     {
         this.Lives--;
