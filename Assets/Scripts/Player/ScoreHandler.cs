@@ -13,6 +13,7 @@ public class ScoreHandler : MonoBehaviour
     public float ScoreMultiplier = 1;
     public GameObject Canvas;
     public Text TextPrefab;
+    public AudioClip CollideSound;
     #endregion
 
     private float currentScore = 0f;
@@ -53,6 +54,8 @@ public class ScoreHandler : MonoBehaviour
 
         if (this.currentScore >= this.ScoreToWin)
             SceneManager.LoadSceneAsync(this.NextLevel, LoadSceneMode.Single);
+
+        this.GetComponent<AudioSource>().PlayOneShot(this.CollideSound, .5f);
     }
 
     void Update()

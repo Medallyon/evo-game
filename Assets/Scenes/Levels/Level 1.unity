@@ -523,7 +523,7 @@ MonoBehaviour:
   ScrollSpeed: 5
 --- !u!4 &1978009779 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d,
+  m_CorrespondingSourceObject: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb,
     type: 2}
   m_PrefabInternal: {fileID: 2096698042}
 --- !u!1001 &2096698042
@@ -533,68 +533,50 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1163100912}
     m_Modifications:
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.018060848
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.018392086
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.80617136
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4119954089815820, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+    - target: {fileID: 4849643033762464, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114929204789751358, guid: db309981c37f53e439b1c6e65ecc8e7d,
+    - target: {fileID: 114945988105194660, guid: b55c8b65d19a416469f706f30aea98cb,
         type: 2}
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 2103693446}
-    - target: {fileID: 114955846861776438, guid: db309981c37f53e439b1c6e65ecc8e7d,
+    - target: {fileID: 114691895450235478, guid: b55c8b65d19a416469f706f30aea98cb,
         type: 2}
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 2103693446}
-    - target: {fileID: 1595241580932478, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1089849725865950, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
-      propertyPath: m_Name
-      value: MIKEY REPLACE ME WITH CELL PREFAB
-      objectReference: {fileID: 0}
-    - target: {fileID: 114955846861776438, guid: db309981c37f53e439b1c6e65ecc8e7d,
-        type: 2}
-      propertyPath: NextLevel
-      value: Evolution 1-2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114955846861776438, guid: db309981c37f53e439b1c6e65ecc8e7d,
-        type: 2}
-      propertyPath: ScoreToWin
-      value: 500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: db309981c37f53e439b1c6e65ecc8e7d, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: b55c8b65d19a416469f706f30aea98cb, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &2103693446
 GameObject:

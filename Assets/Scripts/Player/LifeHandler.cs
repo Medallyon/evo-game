@@ -9,6 +9,7 @@ public class LifeHandler : MonoBehaviour
     public int Lives = 5;
     public GameObject Canvas;
     public Text TextPrefab;
+    public AudioClip CollideSound;
     #endregion
 
     private Text textLives;
@@ -43,6 +44,7 @@ public class LifeHandler : MonoBehaviour
             return;
 
         this.DecreaseLives();
+        this.GetComponent<AudioSource>().PlayOneShot(this.CollideSound, .5f);
     }
     #endregion
 
