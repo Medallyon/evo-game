@@ -16,7 +16,7 @@ public class ScoreHandler : MonoBehaviour
     public AudioClip CollideSound;
     #endregion
 
-    private float currentScore = 0f;
+    public float currentScore = 0f;
     private Text textScore;
  
     #region Unity Methods
