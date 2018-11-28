@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class PowerUpMultiplier : MonoBehaviour
+ 
+public class ExtraLife : MonoBehaviour
 {
     #region Public Fields
     public GameObject Canvas;
@@ -23,23 +23,11 @@ public class PowerUpMultiplier : MonoBehaviour
         if (other.tag != "Player")
             return;
 
-        ScoreHandler playerObject = FindObjectOfType<ScoreHandler>();
-        playerObject.ScoreMultiplier *= 2f;
-
-        Timer timer = new Timer()
-        {
-            Interval = 20000,
-            Enabled = true
-        };
-
-        timer.Elapsed += (object Source, ElapsedEventArgs e) =>
-        {
-            playerObject.ScoreMultiplier /= 2f;
-            timer.Enabled = false;
-        };
+        LifeHandler playerObject = FindObjectOfType<LifeHandler>();
+        playerObject.IncreaseLives();
 
         Text scoreMultText = Instantiate(this.HoverTextPrefab);
-        scoreMultText.text = "DOUBLE POINTS";
+        scoreMultText.text = "EXTRA LIFE";
         scoreMultText.transform.SetParent(this.Canvas.transform, false);
 
         Destroy(this.gameObject);

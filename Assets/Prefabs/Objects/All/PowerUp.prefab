@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114315587494147022}
   - component: {fileID: 114245789215139554}
   - component: {fileID: 114196971873954222}
-  - component: {fileID: 114524231592920176}
+  - component: {fileID: 114321586459221932}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: 1
   Speed: 1
---- !u!114 &114524231592920176
+--- !u!114 &114321586459221932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

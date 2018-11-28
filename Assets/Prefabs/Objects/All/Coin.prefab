@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114064421787490528}
   - component: {fileID: 114936190280577006}
   - component: {fileID: 114001876306006276}
+  - component: {fileID: 114191780029586520}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -138,6 +139,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7.5
+--- !u!114 &114191780029586520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724683967733414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76ab2e6cb80aee49a6d65d7452e8dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
+  HoverTextPrefab: {fileID: 114235059097264356, guid: ec0269c50f7b0cc47b4e311af6c2f3ea,
+    type: 2}
 --- !u!114 &114936190280577006
 MonoBehaviour:
   m_ObjectHideFlags: 1
