@@ -15,7 +15,7 @@ public class PowerUpMover : MonoBehaviour
     {
         Vector3 playerPosition = GameObject.Find("Player").transform.position;
         this.target = new Vector3(playerPosition.x, playerPosition.y, playerPosition.z);
-        this.target.Set(this.target.x, this.target.y, this.target.z - 10);
+        this.target.Set(this.target.x, this.transform.position.y, this.target.z - 10);
     }
  
     void Update()

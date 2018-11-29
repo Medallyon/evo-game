@@ -24,7 +24,7 @@ public class LifeHandler : MonoBehaviour
         Rect dims = this.GetCameraDimensions();
         RectTransform BoxTransform = TextBox.GetComponent<RectTransform>();
         BoxTransform.sizeDelta = new Vector2(200, 28);
-        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 10, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y / 2) - 10);
+        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 45, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y * 1.5f) - 13);
 
         this.textLives.color = this.TextPrefab.color;
         this.textLives.font = this.TextPrefab.font;
@@ -35,7 +35,7 @@ public class LifeHandler : MonoBehaviour
         Outline outline = this.textLives.gameObject.AddComponent<Outline>();
         outline = this.TextPrefab.GetComponent<Outline>();
 
-        this.textLives.text = "Lives: " + this.Lives;
+        this.textLives.text = this.Lives.ToString();
     }
 
     void OnTriggerEnter(Collider other)
@@ -54,7 +54,7 @@ public class LifeHandler : MonoBehaviour
         this.Lives++;
 
         // Implement UI-specific code (i.e. 4 -> 5 hearts)
-        this.textLives.text = "Lives: " + this.Lives;
+        this.textLives.text = this.Lives.ToString();
     }
 
     public void DecreaseLives()
@@ -62,7 +62,7 @@ public class LifeHandler : MonoBehaviour
         this.Lives--;
 
         // Implement UI-specific code (i.e. 5 -> 4 hearts)
-        this.textLives.text = "Lives: " + this.Lives;
+        this.textLives.text = this.Lives.ToString();
 
         if (this.Lives <= 0)
         {

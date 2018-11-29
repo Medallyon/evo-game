@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 90592e3ada196c644b1fe7e14d3bfac0
+guid: 397c24d7845ee84419516fee35636497
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: subdivSphere9
     400000: //RootNode
-    2100000: phong_coin
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCylinder1
+    400002: subdivSphere9
+    2100000: phongE1
+    2300000: subdivSphere9
+    3300000: subdivSphere9
+    4300000: subdivSphere9
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -29,7 +29,7 @@ public class ScoreHandler : MonoBehaviour
         Rect dims = this.GetCameraDimensions();
         RectTransform BoxTransform = TextBox.GetComponent<RectTransform>();
         BoxTransform.sizeDelta = new Vector2(200, 28);
-        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 10, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y * 1.5f) - 10);
+        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 105, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y / 2) - 12);
 
         this.textScore.color = this.TextPrefab.color;
         this.textScore.font = this.TextPrefab.font;
@@ -39,8 +39,8 @@ public class ScoreHandler : MonoBehaviour
 
         Outline outline = this.textScore.gameObject.AddComponent<Outline>();
         outline = this.TextPrefab.GetComponent<Outline>();
+        this.textScore.text = ((int)this.currentScore).ToString();
 
-        this.textScore.text = "Score: " + this.currentScore;
     }
 
     void OnTriggerEnter(Collider other)
@@ -60,7 +60,7 @@ public class ScoreHandler : MonoBehaviour
 
     void Update()
     {
-        this.textScore.text = "Score: " + (int)this.currentScore;
+        this.textScore.text = ((int)this.currentScore).ToString();
         if (this.ScoreMultiplier > 1f)
             this.textScore.text += " (" + this.ScoreMultiplier.ToString("0.##") + "x)";
     }
