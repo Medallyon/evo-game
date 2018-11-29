@@ -29,8 +29,9 @@ public class ScoreHandler : MonoBehaviour
         Rect dims = this.GetCameraDimensions();
         RectTransform BoxTransform = TextBox.GetComponent<RectTransform>();
         BoxTransform.sizeDelta = new Vector2(200, 28);
-        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 105, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y / 2) - 12);
+        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 10, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y / 2) - 6);
 
+        this.textScore.alignment = TextAnchor.MiddleCenter;
         this.textScore.color = this.TextPrefab.color;
         this.textScore.font = this.TextPrefab.font;
         this.textScore.fontSize = this.TextPrefab.fontSize;
