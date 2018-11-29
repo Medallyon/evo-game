@@ -745,7 +745,7 @@ MonoBehaviour:
   Canvas: {fileID: 2103693446}
   TextPrefab: {fileID: 114494432458177966, guid: bfd310d26a3bfd54b9c3e3be74d5f472,
     type: 2}
-  CollideSound: {fileID: 8300000, guid: 9fc03a91b5216b74394a6166059d68f2, type: 3}
+  CollideSound: {fileID: 8300000, guid: caa07ef56e6e2ac4bb7f68d4d5363c3a, type: 3}
   currentScore: 0
 --- !u!114 &1085822198
 MonoBehaviour:
