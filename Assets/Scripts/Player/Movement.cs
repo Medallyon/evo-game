@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
     private Rect boundary;
 
 	// Use this for initialization
-	void Start()
+    void Start()
     {
         this.cam = Camera.main;
 
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update()
+    void Update()
     {
         Ray castPoint;
         RaycastHit hit;
