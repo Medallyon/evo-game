@@ -28,7 +28,7 @@ public class ObstacleMover : MonoBehaviour
             targetPos = new Vector3(this.target.position.x, 1, this.target.position.z - 10);
         this.transform.position = Vector3.MoveTowards(this.transform.position, targetPos, step);
 
-        if (this.gameObject.scene.name.EndsWith("2"))
+        if (!this.gameObject.scene.name.EndsWith("1"))
             this.transform.localRotation = new Quaternion(0, 180, 0, 0);
 
         this.frames++;
