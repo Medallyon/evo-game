@@ -1723,11 +1723,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 1.5
-  Obstacle: {fileID: 1176055402235050, guid: 5664444f6d4d2714f9029ef5a9611471, type: 2}
+  Obstacle: {fileID: 1295563392304878, guid: 5664444f6d4d2714f9029ef5a9611471, type: 2}
   Edible: {fileID: 1068346527764252, guid: aa0f91d8f4e87f04baa347b68d2306ff, type: 2}
   PowerUp: {fileID: 1262237680677532, guid: 6f5be2270594b2b4193408de4fd914b7, type: 2}
   Coin: {fileID: 1650136836007488, guid: 90d147cc9df354b4f8c292a3fcdb1617, type: 2}
-  SpawnPosition: {x: 8.3, y: 1, z: 26}
+  SpawnPosition: {x: 8.3, y: 0, z: 26}
   Parent: {fileID: 0}
 --- !u!4 &2112969599
 Transform:
