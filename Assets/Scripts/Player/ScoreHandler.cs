@@ -17,33 +17,8 @@ public class ScoreHandler : MonoBehaviour
     #endregion
 
     public float currentScore = 0f;
-    private Text textScore;
  
     #region Unity Methods
-    void Start()
-    {
-        GameObject TextBox = new GameObject("Text_Score");
-        TextBox.transform.parent = this.Canvas.transform;
-        this.textScore = TextBox.AddComponent<Text>();
-
-        Rect dims = this.GetCameraDimensions();
-        RectTransform BoxTransform = TextBox.GetComponent<RectTransform>();
-        BoxTransform.sizeDelta = new Vector2(200, 28);
-        TextBox.transform.localPosition = new Vector3(-((dims.width * Screen.width) / 2) + (BoxTransform.sizeDelta.x / 2) + 10, ((dims.height * Screen.height) / 2) - (BoxTransform.sizeDelta.y / 2) - 6);
-
-        this.textScore.alignment = TextAnchor.MiddleCenter;
-        this.textScore.color = this.TextPrefab.color;
-        this.textScore.font = this.TextPrefab.font;
-        this.textScore.fontSize = this.TextPrefab.fontSize;
-        this.textScore.fontStyle = this.TextPrefab.fontStyle;
-        this.textScore.lineSpacing = this.TextPrefab.lineSpacing;
-
-        Outline outline = this.textScore.gameObject.AddComponent<Outline>();
-        outline = this.TextPrefab.GetComponent<Outline>();
-        this.textScore.text = ((int)this.currentScore).ToString();
-
-    }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Edible")
@@ -61,42 +36,12 @@ public class ScoreHandler : MonoBehaviour
 
     void Update()
     {
-        this.textScore.text = ((int)this.currentScore).ToString();
+        this.TextPrefab.text = ((int)this.currentScore).ToString();
         if (this.ScoreMultiplier > 1f)
-            this.textScore.text += " (" + this.ScoreMultiplier.ToString("0.##") + "x)";
+            this.TextPrefab.text += " (" + this.ScoreMultiplier.ToString("0.##") + "x)";
     }
     #endregion
 
     #region Private Methods
-    private Rect GetCameraDimensions()
-    {
-        // determine the game window's current aspect ratio
-        float windowaspect = (float)Screen.width / (float)Screen.height;
-
-        // current viewport height should be scaled by this amount
-        float scaleheight = windowaspect / (9f / 16f);
-
-        Rect rect = new Rect();
-
-        // if scaled height is less than current height, add letterbox
-        if (scaleheight < 1.0f)
-        {
-            rect.width = 1.0f;
-            rect.height = scaleheight;
-            rect.x = 0;
-            rect.y = (1.0f - scaleheight) / 2.0f;
-        }
-        else // add pillarbox
-        {
-            float scalewidth = 1.0f / scaleheight;
-
-            rect.width = scalewidth;
-            rect.height = 1.0f;
-            rect.x = (1.0f - scalewidth) / 2.0f;
-            rect.y = 0;
-        }
-
-        return rect;
-    }
     #endregion
 }

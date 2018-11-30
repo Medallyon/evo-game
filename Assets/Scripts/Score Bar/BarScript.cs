@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BarScript : MonoBehaviour {
-    [SerializeField]
-    private float fillAmount;
-
-    [SerializeField]
-    private Image content;
-
+public class BarScript : MonoBehaviour
+{
+    public Image content;
     private ScoreHandler sh;
 
 	// Use this for initialization
@@ -23,13 +19,8 @@ public class BarScript : MonoBehaviour {
     {
         var currentLevel = this.gameObject.scene.name;
         if (currentLevel.EndsWith("1"))
-            this.fillAmount = this.sh.currentScore / 500;
+            this.content.fillAmount = this.sh.currentScore / 500;
         else
-            this.fillAmount = this.sh.currentScore / 1000;
-        HandleBar();
+            this.content.fillAmount = this.sh.currentScore / 1000;
 	}
-    private void HandleBar()
-    {
-        content.fillAmount = fillAmount;
-    }
 }
